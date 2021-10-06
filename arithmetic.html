@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arithmetic computation</title>
+    </head>
+ 
+<body>
+
+<h2>Jawahar Reddy Nomula computes</h2>
+
+<form>
+    <label for="base">Enter a base</label>
+    <input type ="number" id="base" name="base" value=10> <br>
+
+    <label for="exponent">Enter an exponent</label>
+    <input type ="number" id="exponent" name="exponent" value=2> <br>
+
+    <input type="button" onclick="powers()" value="Compute">
+</form>
+
+
+<p id="result">This text will be replaced </p>
+
+<script> 
+result=""
+    function powers() {
+
+         base = document.getElementById("base").value
+         exponent = document.getElementById("exponent").value
+         var result = "Powers of " + base + " are: "
+         j = 1
+         out = document.getElementById("result")
+
+        for (i = 1; i <= exponent; i++) {
+            j *= base;
+            result =result+ j + " "
+            }
+            out.innerHTML = result
+        }
+</script>
+
+</body>
+</html> 
