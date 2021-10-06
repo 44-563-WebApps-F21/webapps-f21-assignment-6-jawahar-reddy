@@ -17,9 +17,24 @@
 
     <input type="button" onclick="powers()" value="Compute">
 </form>
-
-
 <p id="result">This text will be replaced </p>
+<br><br>
+<h2>Basic math calculations</h2>
+<form>
+    <input type="radio" id="plus" name="operation" onclick="processRadio()" value="plus">
+    <label for="plus">Plus</label></br>
+
+    <input type="radio" id="minus" name="operation" onclick="processRadio()" value="minus">
+    <label for="minus">Minus</label></br>
+
+    <input type="radio" id="times" name="operation" onclick="processRadio()" value="times">
+    <label for="times">Times</label></br>
+
+    <input type="radio" id="divide" name="operation" onclick="processRadio()" value="divide">
+    <label for="divide">Divide</label></br>
+</form>
+<p id="result2">This text will be replaced by result </p>
+
 
 <script> 
 result=""
@@ -37,6 +52,31 @@ result=""
             }
             out.innerHTML = result
         }
+        
+function processRadio() {
+    base = document.getElementById("base").value
+    exponent = document.getElementById("exponent").value
+    plus = document.getElementById("plus").checked
+    minus = document.getElementById("minus").checked
+    times = document.getElementById("times").checked
+    divide = document.getElementById("divide").checked
+        if (plus) {
+                document.getElementById("result2").innerHTML = (Number)(base) + Number(exponent)
+            }
+            if (minus) {
+                document.getElementById("result2").innerHTML =  base- exponent
+            }
+            if (times) {
+                document.getElementById("result2").innerHTML = base * exponent
+            }
+            if (divide) {
+                document.getElementById("result2").innerHTML = base / exponent
+            }
+    
+
+
+}
+
 </script>
 
 </body>
