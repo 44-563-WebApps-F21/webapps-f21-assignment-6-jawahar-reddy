@@ -23,6 +23,15 @@
 
 
 <p id="result">This text will be replaced </p>
+<form>
+    <label for="name">Enter a property </label>
+    <input type="text" id="name" name="property" value="color" />
+    <br>
+    <label for="property_value">enter a value</label>
+    <input type="text" id="property_value" name="property" /> <br>
+    <input type="button" onclick="updateCar()" value="Update the car" />
+  </form>
+  <p id="result2">This text will be replaced</p>
 
 <script> 
         my_car= {};
@@ -39,6 +48,18 @@
             out.innerHTML = my_car
             my_car = JSON.parse(my_car)
         }
+
+        function updateCar() {
+        console.log("Getting form values");
+        my_car = " ";
+        property = document.getElementById("name").value
+        value = document.getElementById("property_value").value
+        my_car = property + ":" + value;
+        out = document.getElementById("result2")
+        out.innerHTML = my_car
+        }
+
+      
       
 </script>
 

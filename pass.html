@@ -37,7 +37,11 @@ function processPhrase(){
         alert("Access denied")
         wrong= wrong+1
         out.innerHTML = "wrong: "+wrong + "  "+ "Correct: " +correct
+    
+    if(wrong >= 3){
+         alert("account locked");
     }
+}
 }
 let usingImage = 1
     function newImage() {
@@ -59,7 +63,7 @@ let usingImage = 1
 </script>
 
 <div class="container ">
-    <img src="Macaw.jpg" id="Images" alt="Macaw" height= 200 width=200 onclick=newImage()  > 
+    <img src="Macaw.jpg" id="Images" alt="Macaw" height= 200 width=200 onclick=newImage() > 
 </div>
 
 </body>
